@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>잘가라2020</title>
+
+    <link rel="shortcut icon" href="https://image.flaticon.com/icons/png/128/2411/2411823.png">
+
+    <meta property="og:image"
+        content="https://www.ghibli.jp/gallery/majo011.jpg">
+    <meta property="og:title" content="잘가라2020">
+    <meta property="og:description" content="편지가 도착하였습니다">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+
+    <script src="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/xmas/snow.js"></script>
+
+    <style>
+        * {
+            font-family: 'Poor Story', cursive;
+        }
+
+        body {
+            background-color: #25a4cd;
+        }
+
+        .envelope {
+            width: 200px;
+            height: 200px;
+
+            background-image: url('https://pngimg.com/uploads/envelope/envelope_PNG18366.png');
+            background-size: cover;
+            background-position: center;
+
+            margin: 200px auto 0px auto;
+
+            cursor: pointer;
+        }
+
+        .envelope-msg {
+            color: whitesmoke;
+            text-align: center;
+        }
+
+        .letter-close {
+            display: block;
+        }
+        
+        .letter-open {
+            display: none;
+        }
+
+        .zzal {
+            width: 200px;
+            height: 200px;
+
+            background-image: url('https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif');
+            background-size: cover;
+            background-position: center;
+
+            margin: 100px auto 0px auto;
+
+            border-radius: 100px;
+            border: 5px solid whitesmoke;
+
+            box-shadow: 0px 0px 10px 0px whitesmoke;
+        }
+
+        h1 {
+            color: whitesmoke;
+            text-align: center;
+
+            margin: 30px 0;
+        }
+
+        .massagebox {
+            background-color: ivory;
+
+            width: 400px;
+            margin: auto;
+            padding: 30px;
+
+            color: brown;
+            font-size: 20px;
+            line-height: 30px;
+
+            box-shadow: 0px 0px 10px 0px whitesmoke;
+        }
+
+        .from {
+            text-align: right;
+            margin-bottom: 0px;
+        }
+
+        @media screen and (max-width: 760px) {
+            .massagebox {
+                width: 300px;
+                padding: 20px;
+            }
+
+            .zzal {
+                width: 150px;
+                height: 150px;
+                margin: 70px auto 0px auto;
+            }
+            h1 {
+              font-size: 28px;
+            }
+            .envelope {
+                margin: 150px auto 0px auto;
+            }
+        }
+    </style>
+    <script>
+        function open_letter() {
+            var userName = prompt("당신의 이름은 무엇인가요?", "이슬이친구");
+            if(userName=="이슬이친구") { 
+                alert("정답입니다"); 
+                document.getElementsByClassName("letter-close")[0].style.display = 'none';
+                document.getElementsByClassName("letter-open")[0].style.display = 'block';
+            }  else {alert("오답입니다");}
+
+        }
+            
+        function go_zzal() {
+            alert('앗, 어떻게 찾았지?');
+            window.location.href = "https://www.naver.com/"
+        }
+    </script>
+    
+    </head>
+    <body>
+        <div class="letter-close">
+            <div class="envelope" onclick="open_letter()"></div>
+            <h2 class="envelope-msg">봉투를 열어봐!</h2>
+        </div>
+    
+        <div class="letter-open">
+        <div class="zzal" onclick="go_zzal()"></div>
+        <h1>2020년에도 우리는 친구</h1>
+        <div class="massagebox">
+            친구들에게. <br />
+            올해 이런저런 일이 많았는데 <br />
+            너희 덕분에 하나도 힘들지 않았어 <br />
+            내년에도 우리 우정 변치말자 <br />
+            연말에 다 같이 못 봐서 아쉽다 <br />
+            <p class="from">2020.12.31 이슬이가</p>
+        </div>
+
+    </div>
+</body>
+
+</html>
